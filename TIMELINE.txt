@@ -1,0 +1,41 @@
+REACTJS-REDUX-CREATE-READ-UPDATE-DELETE-JSON-API 
+
+1.CREATE-REACT-APP 
+->npx create-react-app client
+2. add folder for components
+-> Home, 
+-> AddUser, 
+-> UpdateUser, 
+-> UserListing
+using sfc - stateless functiuon components
+3. create folder redux with a files of 
+-> action, reducers and Actiontypes and store
+4. Install bootstrap karaan
+->npm i bootstrap
+->npm i react-bootstrap
+->npm install react-bootstrap bootstrap 
+5. ROUTING PURPOSE - REACT ROUTER D0M
+->npm i react-router-dom 
+6. INSTALL REACT NOTIFICATION TOASTER
+->npm i react-toasify
+7. HTTP REQUEST-PROVIDER - AXIOS 
+-> npm i axios 
+8. INSTALL REDUX TOOLS AND PACKAGES 
+-> npm i 
+redux
+react-redux
+redux-thunk
+redux-logger
+@reduxjs/toolkit
+9. INSTALL JSON-SERVER FOR TESTING 
+npm i -g json-server - globally
+npm i json-server --save-dev - locally(kani atoa for testing)
+ npm install -g json-server@0.16.3
+10. RUN JSON-SERVER API 
+->create a file db.json
+->json-server --watch src/Data/db.json --port 8000
+
+
+ADDITION NEW:
+11. INSTALL LARAVEL 10 PROJECT
+-> composer create-project laravel/laravel server

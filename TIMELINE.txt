@@ -43,3 +43,17 @@ ADDITION NEW:
 ->npm i --legacy-peer-deps
 12. INSTALL LARAVEL 10 PROJECT
 -> composer create-project laravel/laravel server
+13. RUN MIGRATION 
+->php artisan migrate 
+->php artisan migrate:rollback
+add this:
+use Illuminate\Support\Facades\Schema;
+
+public function boot()
+{
+    Schema::defaultStringLength(191);
+}
+
+->php artisan migrate 
+14. MAKE MODEL 
+->php artisan make:model users 

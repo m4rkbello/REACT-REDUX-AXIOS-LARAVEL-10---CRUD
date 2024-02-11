@@ -36,6 +36,10 @@ npm i json-server --save-dev - locally(kani atoa for testing)
 ->json-server --watch src/Data/db.json --port 8000
 
 
+
+
 ADDITION NEW:
-11. INSTALL LARAVEL 10 PROJECT
+11. INSTALL ALL THE DEPENCENCIES USING LEGACY-DEPS 
+->npm i --legacy-peer-deps
+12. INSTALL LARAVEL 10 PROJECT
 -> composer create-project laravel/laravel server

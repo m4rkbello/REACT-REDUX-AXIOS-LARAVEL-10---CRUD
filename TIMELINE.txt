@@ -56,4 +56,5 @@ public function boot()
 
 ->php artisan migrate 
 14. MAKE MODEL 
-->php artisan make:model users 
+->php artisan make:model users
+-php artisan make:model data -mfs

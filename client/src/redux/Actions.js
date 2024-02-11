@@ -71,7 +71,7 @@ export const FetchUserList =()=> {
         // setTimeout(() => {
     
             dispatch(makeRequest());
-            axios.get('http://localhost:8000/user')
+            axios.get('http://127.0.0.1:8000/api/v1/users')
             .then(res=>{
                 const userlist=res.data;
                 dispatch(getUserList(userlist));

@@ -59,3 +59,9 @@ public function boot()
 ->php artisan make:model users -mfs
 ->php artisan migrate:reset
 ->php artisan migrate --seed
+15. MAKE CONTROLLER WITH API 
+->php artisan make:controller UsersController --api
+16. VIEW ALL THE ROUTE LIST AS API 
+->php artisan route:list --path=api
+17. MAGHIMOG FILE SA ELOQUENT 
+->php artisan make:resource

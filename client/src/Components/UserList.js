@@ -44,27 +44,29 @@ const UserList = (props) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {props.user.userlist && props.user.userlist.length > 0 ? (
-                            props.user.userlist.map((item, index) => 
-                                <tr key={index}>
-                                    <td>{item.id}</td>
-                                    <td>{item.name}</td>
-                                    <td>{item.email}</td>
-                                    <td>{item.phone}</td>
-                                    <td>{item.role}</td>
-                                    <td className=''>
-                                        <Link to={'/user/edit/'+item.id} className="btn btn-warning">Edit</Link>
-                                        <button onClick={()=>{handleDelete(item.id)}} className="btn btn-danger">Delete</button>
-                                    </td>
-                                </tr>
-                            )
-                        ) : (
-                            <tr>
-                                <td colSpan="6"><h1>
-                                NO DATA!
-                                </h1></td>
+                       
+                    {props.user && props.user.userlist && props.user.userlist.data && props.user.userlist.data.length > 0 ? (
+                        props.user.userlist.data.map((item, index) => 
+                            <tr key={index}>
+                                <td>{item.id}</td>
+                                <td>{item.name}</td>
+                                <td>{item.email}</td>
+                                <td>{item.phone}</td>
+                                <td>{item.role}</td>
+                                <td className=''>
+                                    <Link to={'/user/edit/'+item.id} className="btn btn-warning">Edit</Link>
+                                    <button onClick={()=>{handleDelete(item.id)}} className="btn btn-danger">Delete</button>
+                                </td>
                             </tr>
-                        )}
+                        )
+                    ) : (
+                        <tr>
+                            <td colSpan="6"><h1>NO DATA!</h1></td>
+                        </tr>
+                    )}
+                    
+                      
+                 
                     </tbody>
                 </table>
             </div>

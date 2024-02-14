@@ -122,20 +122,16 @@ export const DispatchAddUser =(data)=> {
 
 
 //DISPATCH FUNCTION PARA MAG DELETE UG USER
-export const ActionUpdateUser =(data, code)=> {
+export const ActionUpdateUser = (data, code) => {
     return (dispatch) => {
-        // setTimeout(() => {
-    
-            dispatch(makeRequest());
-            axios.put('http://localhost:8000/user/'+code,data)
-            .then(res=>{
+        dispatch(makeRequest());
+        axios.put('http://127.0.0.1:8000/api/v1/users/' + code, data) // Added slash before code
+            .then(res => {
                 dispatch(addUser());
-                toast.success('User Added successfully!');
-            }).catch(err=>{
+                toast.success('User updated successfully!');
+            }).catch(err => {
                 dispatch(failRequest(err.message))
             })
-        // }, 2000);
-
     }
 }
 
@@ -145,7 +141,7 @@ export const FetchUserObjData =(markbello)=> {
         // setTimeout(() => {
     
             dispatch(makeRequest());
-            axios.get('http://localhost:8000/user/' + markbello)
+            axios.get('http://127.0.0.1:8000/api/v1/users/' + markbello)
             .then(res=>{
                 const userlist=res.data;
                 dispatch(getUserObjectData(userlist));
